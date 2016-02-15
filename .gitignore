@@ -1,5 +1,6 @@
-/typings
-/node_modules
+typings/
+node_modules/
 .idea/*
-*.*.js
-*.*.js.map
+
+app/**/*.js
+app/**/*.js.map

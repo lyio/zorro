@@ -1,8 +1,13 @@
 import {Component} from 'angular2/core';
+import {ResultsComponent} from './results/results.component.ts';
 
 @Component({
-    selector: 'zorro',
-    template: '<h1>My First Zorro 2</h1>'
+    selector: 'app',
+    template: `
+        <h1>Übersicht</h1>
+        <results></results>
+    `,
+    directives: [ResultsComponent]
 })
 
-export class AppComponent { };
+export class AppComponent { }

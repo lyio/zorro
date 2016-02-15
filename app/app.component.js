@@ -1,4 +1,4 @@
-System.register(['angular2/core'], function(exports_1) {
+System.register(['angular2/core', './results/results.component.ts'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,12 +8,15 @@ System.register(['angular2/core'], function(exports_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
+    var core_1, results_component_ts_1;
     var AppComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (results_component_ts_1_1) {
+                results_component_ts_1 = results_component_ts_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
@@ -21,15 +24,15 @@ System.register(['angular2/core'], function(exports_1) {
                 }
                 AppComponent = __decorate([
                     core_1.Component({
-                        selector: 'zorro',
-                        template: '<h1>My First Zorro 2</h1>'
+                        selector: 'app',
+                        template: "\n        <h1>\u00DCbersicht</h1>\n        <results></results>\n    ",
+                        directives: [results_component_ts_1.ResultsComponent]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
                 return AppComponent;
             })();
             exports_1("AppComponent", AppComponent);
-            ;
         }
     }
 });

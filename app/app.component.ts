@@ -1,3 +1,5 @@
+import 'rxjs/Rx';
+
 import {Component} from 'angular2/core';
 import {ResultsComponent} from './results/results.component.ts';
 

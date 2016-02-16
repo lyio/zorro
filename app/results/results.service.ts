@@ -1,23 +1,17 @@
 import {Injectable} from 'angular2/core';
+import {Http} from 'angular2/http';
 
 export class Result {
-    constructor(public id: number, public team: string, public opponent: string, public result: string) { }
+    constructor(public home: string, public visiting: string) { }
 }
 
 @Injectable()
 export class ResultsService {
+
+    constructor(private _http: Http) {}
+
     getResults() {
-        return resultsPromise;
+        return this._http.get('http://localhost:8080/api/results')
+            .map(response => response.json().result);
     }
 }
-
-var results = [
-    new Result(1, 'LTTV Leutzscher Füchse 12', 'TSV Einheit Lindenthal 3', '5:10'),
-    new Result(2, 'LTTV Leutzscher Füchse 12', 'Tauchaer SV 4', '10:6'),
-    new Result(3, 'LTTV Leutzscher Füchse 12', 'SV Eintracht Leipzig 5', '10:4')
-];
-
-var resultsPromise = Promise.resolve(results);
-
-
-
